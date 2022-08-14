@@ -1,3 +1,4 @@
+// declarando variáveis que serao utilzadas
 let x = document.querySelector('.x');
 let o = document.querySelector('.o');
 let boxes = document.querySelectorAll('.box');
@@ -10,7 +11,7 @@ let secondPlayer;
 let player1 = 0;
 let player2 = 0;
 
-// adicionando o evento de click a todos as caixas
+// adicionando o evento de click a todas as caixas
 for(let i = 0; i < boxes.length; i++) {
 
   // quando há o click na caixa
@@ -18,7 +19,7 @@ for(let i = 0; i < boxes.length; i++) {
 
     let el = checkEl(player1, player2);
     
-    // verificando se ja tem um elemento
+    // verificando se já tem um elemento
     if(this.childNodes.length == 0) {
       let cloneEl = el.cloneNode(true);
 
@@ -28,7 +29,7 @@ for(let i = 0; i < boxes.length; i++) {
       if(player1 == player2) {
         player1++;
 
-        // jogada ia
+        // jogada IA
         if(secondPlayer == 'ai-player') {
 
           computerPlay();
@@ -160,7 +161,6 @@ function checkWinCondition() {
   }
 
   // Diagonal
-
   if(b1.childNodes.length > 0 && b5.childNodes.length > 0 && b9.childNodes.length > 0) {
 
     let b1Child = b1.childNodes[0].className;
@@ -188,7 +188,6 @@ function checkWinCondition() {
     }
     
   }
-
 
   // deu velha
   let counter = 0;
